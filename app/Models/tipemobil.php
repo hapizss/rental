@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class tipemobil extends Model
 {
     use HasFactory;
+
+    protected $table = "tipemobils";
+
+    protected $fillabels = [
+        'tipe'
+    ];
 }

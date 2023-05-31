@@ -7,6 +7,7 @@ use App\Http\Controllers\merkcontroller;
 use App\Http\Controllers\mobilcontroller;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +35,5 @@ route::get('/mobil', [mobilcontroller::class, 'index']);
 route::get('/mobil/create', [mobilcontroller::class, 'create']); //untuk memanggil form 
 route::post('/mobil/simpandata', [mobilcontroller::class, 'store']); //mengirim request
 route::get('/merk', [merkcontroller::class, 'index']);
+route::get('/merk/create', [merkcontroller::class, 'create']);
+route::post('/merk/simpan-data', [merkcontroller::class, 'store']);
