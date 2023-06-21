@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\TipeMobil;
+use App\Models\tipemobil;
 
 class TipeMobilController extends Controller
 {
     function index()
     {
-        $datatipe = TipeMobil::get();
+        $datatipe = tipemobil::get();
         return view('pages.tipe_mobil.index', ['datatipe' => $datatipe]);
     }
 
@@ -20,7 +20,7 @@ class TipeMobilController extends Controller
 
     function store(Request $request)
     {
-        $datatipe = new TipeMobil;
+        $datatipe = new tipemobil;
         $datatipe->tipe_mobil = $request->tipe_mobil;
         $datatipe->save();
 
