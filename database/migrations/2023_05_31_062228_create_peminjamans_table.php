@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('peminjamans', function (Blueprint $table) {
             $table->id();
+            $table->date('tanggal_peminjaman');
+            $table->date('tanggal_pengembalian');
+            $table->string('status_mobil');
+            $table->string('lama_peminjaman');
+            $table->integer('user_id')->references('id')->on('user');
+            $table->integer('mobil_id')->references('id')->on('mobils');
             $table->timestamps();
         });
     }
